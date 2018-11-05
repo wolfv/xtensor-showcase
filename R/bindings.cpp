@@ -9,7 +9,10 @@ using namespace Rcpp;
 // [[Rcpp::plugins(cpp14)]]
 
 // [[Rcpp::export]]
-auto rayshade(xt::rarray<double>& heightmap)
+auto rayshade(const xt::rarray<double>& heightmap)
 {
-	return rayshade_impl(heightmap);
+	std::cout << heightmap << std::endl;
+	auto result = rayshade_impl(heightmap);
+	std::cout << result << std::endl;
+	return result;
 }
