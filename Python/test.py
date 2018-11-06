@@ -12,14 +12,14 @@ plt.imshow(result)
 plt.show()
 
 print("Loading Mountain Data...")
-# big = np.loadtxt("../assets/big.csv", delimiter=",", dtype=np.float32)
+big = np.loadtxt("../assets/mountains.csv", delimiter=",", dtype=np.float32)
 
-# print("Shading Mountain Data...")
-# result_big = rayshade.rayshade(big)
+print("Shading Mountain Data...")
+result_big = rayshade.rayshade(big)
 
-# print("Displaying...")
-# plt.imshow(result_big)
-# plt.show()
+print("Displaying...")
+plt.imshow(result_big)
+plt.show()
 
 import timeit
 

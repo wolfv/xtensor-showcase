@@ -10,4 +10,4 @@
 g++ -I/usr/include/python3.7m/ `python3-config --ldflags` -shared -fPIC bindings.cpp -o rayshade.so
 ```
 
-- Run example file:
+- Run example file: `python3 test.py`
