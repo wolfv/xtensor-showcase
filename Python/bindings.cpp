@@ -7,5 +7,7 @@ PYBIND11_MODULE(rayshade, m) {
     xt::import_numpy();
 
     m.doc() = "Shade some rays in Python!";
-    m.def("rayshade", [](const xt::pyarray<float, xt::layout_type::row_major>& arr) { return rayshade_impl(arr); } );
+    m.def("rayshade", [](const xt::pyarray<float, xt::layout_type::row_major>& arr) {
+    	return rayshade_impl(arr);
+    });
 }

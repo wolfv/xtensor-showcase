@@ -11,8 +11,5 @@ using namespace Rcpp;
 // [[Rcpp::export]]
 auto rayshade(const xt::rarray<double>& heightmap)
 {
-	std::cout << heightmap << std::endl;
-	auto result = rayshade_impl(heightmap);
-	std::cout << result << std::endl;
-	return result;
+	return rayshade_impl(heightmap);
 }
